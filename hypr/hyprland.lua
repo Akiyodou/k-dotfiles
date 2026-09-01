@@ -46,7 +46,7 @@ local music 	  = "spotify"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
+   hl.exec_cmd("kitty --hold fastfetch")
 --   hl.exec_cmd("nm-applet")
    hl.exec_cmd("waybar & hyprpaper & librewolf")
 end)
@@ -85,6 +85,11 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
+
+hl.window_rule({
+	match = {class = "kitty"},
+	opacity = "0.88 override 0.88 override 1.0 override",
+})
 
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
@@ -209,8 +214,9 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
+	disable_splash_rendering = true,
     },
 })
 
@@ -265,19 +271,40 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(secondMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(launcher))
 hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(runner))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))    -- dwindle only
 
--- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+-- Move focus with mainMod + vimKeys
+hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
+
+-- Move windows with secondMod + vimKeys
+hl.bind(secondMod .. " +H", hl.dsp.window.move({direction = "left"}))
+hl.bind(secondMod .. " +J", hl.dsp.window.move({direction = "down"}))
+hl.bind(secondMod .. " +K", hl.dsp.window.move({direction = "up"}))
+hl.bind(secondMod .. " +L", hl.dsp.window.move({direction = "right"}))
+
+-- Resize Mode
+hl.bind(secondMod .. " +S", hl.dsp.submap("resize"))
+
+hl.define_submap("resize", function()
+	hl.bind("left", hl.dsp.window.resize({x = -50, y = 0, relative = true}), {repeating = true})
+	hl.bind("down", hl.dsp.window.resize({x = 0, y = 50, relative = true}), {repeating = true})
+	hl.bind("up", hl.dsp.window.resize({x = 0, y = -50, relative = true}), {repeating = true})
+	hl.bind("right", hl.dsp.window.resize({x = 50, y = 0, relative = true}), {repeating = true})
+
+
+	hl.bind("escape", hl.dsp.submap("reset"))
+end)
+
+
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -288,8 +315,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(secondMod .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind("ALT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

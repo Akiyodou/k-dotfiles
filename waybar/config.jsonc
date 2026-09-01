@@ -1,0 +1,112 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/notification",
+        "cpu",
+        "load",
+        "memory",
+        "network",
+        "temperature",
+        "backlight/slider",
+        "pulseaudio",
+        "battery",
+        "clock"
+    ],
+    "hyprland/window": {
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "active": "o",
+            "default": "p"
+        },
+        "persistent-workspaces": {
+            "*": 5 // 5 Workspaces by default
+        }
+    },
+    "load": {
+        "interval": 10,
+        "format": "load: {load1}",
+        "max-length": 10
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+        "device": "brightness"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "CPU: {usage}%"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)} 󰃰 ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "first-day-of-week": 1,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+}
