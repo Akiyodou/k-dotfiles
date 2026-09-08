@@ -1,0 +1,26 @@
+{
+    "group/hardware": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 650,
+            "transition-right-to-left:": false
+        },
+        "modules": [
+            "cpu",
+            "load",
+            "disk"
+        ]
+    },
+    "group/system": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 650,
+            "transition-right-to-left:": false
+        },
+        "modules": [
+            "battery",
+            "backlight",
+            "pulseaudio"
+        ]
+    }
+}

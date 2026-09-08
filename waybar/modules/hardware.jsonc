@@ -1,0 +1,15 @@
+{
+    "cpu": {
+        "interval": 10,
+        "format": "CPU: {usage}%"
+    },
+    "load": {
+        "interval": 10,
+        "format": "load: {load1}",
+        "max-length": 10
+    },
+    "disk": {
+        "interval": 30,
+        "format": "{percentage_free}% free on {path}"
+    }
+}

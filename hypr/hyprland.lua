@@ -95,13 +95,13 @@ hl.window_rule({
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 10,
+        gaps_out = 5,
 
-        border_size = 2,
+        border_size = 5,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+	    active_border   = { colors = {"rgba(234,19,29,1)","rgba(120,35,108,1)","rgba(0,130,240,0.1)"}, angle = 45 },
+            inactive_border = "rgb(0a1845)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -123,14 +123,14 @@ hl.config({
 
         shadow = {
             enabled      = true,
-            range        = 4,
-            render_power = 3,
+            range        = 15,
+            render_power = 7,
             color        = 0xee1a1a1a,
         },
 
         blur = {
             enabled   = true,
-            size      = 3,
+            size      = 5,
             passes    = 1,
             vibrancy  = 0.1696,
         },
