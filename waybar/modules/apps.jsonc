@@ -1,6 +1,6 @@
 {
     "custom/terminal": {
-        "format": "",
+        "format": "",
         "on-click": "kitty",
         "tooltip": false
     },
@@ -10,7 +10,7 @@
         "tooltip": false
     },
     "custom/browser": {
-        "format": "",
+        "format": "󰖟",
         "on-click": "librewolf",
         "tooltip": false
     },
@@ -22,6 +22,11 @@
     "custom/files": {
         "format": "",
         "on-click": "files",
+        "tooltip": false
+    },
+    "custom/obsidian": {
+        "format": "",
+        "on-click": "obsidian",
         "tooltip": false
     }
 }

@@ -1,8 +1,9 @@
 {
     "custom/media_play": {
         "exec": "~/.config/waybar/scripts/media_play.sh",
+        "on-click": "playerctl play-pause",
         "escape": true,
-        "tooltip": false
+        "tooltip": true
     },
     "custom/media_animation": {
         "exec": "~/.config/waybar/scripts/media_animation.sh",
@@ -13,5 +14,12 @@
         "escape": true,
         "tooltip": false,
         "interval": 1
+    },
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "return-type": "string",
+        "escape": true,
+        "format": "{}",
+        "tooltip": false
     }
 }

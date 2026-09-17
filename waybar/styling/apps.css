@@ -30,6 +30,10 @@
     padding: 4px 6px;
 }
 
+#custom-obsidian {
+    padding: 4px 6px;
+}
+
 #custom-media_play {
     margin: 3px 4px;
     padding: 1px 4px;
@@ -38,10 +42,19 @@
 }
 
 #custom-media_time {
-    margin: 3px 4px;
-    padding: 1px 4px;
+    font-size:x-small;
+    margin:10px 2px;
+    padding: 0px 2px;
     background-color: @background;
     border-radius: 10px;
+}
+
+#custom-cava {
+    font-size: medium;
+    padding: 0 5px;
+    margin: 10 2px;
+    border-radius: 6px;
+    background-color: @background;
 }
 
 /* Mode Modules */
@@ -62,11 +75,11 @@
 }
 
 #battery.warning {
-    background-color: @frame;
+    background-color: @warning;
 }
 
 #battery.critical {
-    background-color: @body;
+    background-color: @urgent;
 }
 
 #backlight {

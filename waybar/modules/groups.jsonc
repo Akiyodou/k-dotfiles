@@ -10,7 +10,8 @@
             "custom/code",
             "custom/browser",
             "custom/spotify",
-            "custom/files"
+            "custom/files",
+            "custom/obsidian"
         ]
     },
     "group/hardware": {
@@ -43,7 +44,8 @@
         "orientation": "horizontal",
         "modules": [
             "custom/media_play",
-            "custom/media_time"
+            "custom/media_time",
+            "custom/cava"
         ]
     }
 }

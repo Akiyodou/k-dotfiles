@@ -3,29 +3,32 @@
 #workspaces {
   margin: 2px 4px;
   padding: 2px 4px;
-  background-color: @body;
-  border-radius: 25px;
+  background-color: @background;
+  border-radius: 20px;
 }
 
 #workspaces button {
-    min-width: 20px;
-    padding: 0 2px;
-    margin: 2 2px;
-    background: @body;
-    color: @trim;    margin: 4px 4px;
-    border-bottom: 2px solid transparent;
-    border-radius: 20px;
+  font-size: 25px;
+  min-width: 2px;
+  padding: 0 2px;
+  margin: 0 2px;
+  background: @background;
+  color: @text;
+  border-bottom: 2px solid transparent;
+  border-radius: 20px;
 }
 
 #workspaces button.active {
-  padding: 0 4px;    margin: 4px 4px;
-  margin: 0 0px;
-  background-color: @frame;
+  font-size: 25px;
+  padding: 0 6px;
+  margin: 0px 2px;
+  background-color: @accent;
   font-weight: 700;
-  color: @joint;
-  border-radius: 25px;
+  color: @text;
+  border-radius: 10px;
 }
 
 #workspaces button.empty {
+  font-size: 25px;
   color: @text-muted;
 }

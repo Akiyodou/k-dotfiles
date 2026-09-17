@@ -4,7 +4,7 @@
 */
 {
     "layer": "top",
-    "height": 20,
+    "height": 14,
     "spacing": 6,
     "include": [
         "./modules/groups.jsonc",
@@ -20,8 +20,8 @@
     ],
     "modules-left": [
         "group/applications",
-        "group/media",
         "idle_inhibitor",
+        "group/media",
         "hyprland/submap"
     ],
     "modules-center": [

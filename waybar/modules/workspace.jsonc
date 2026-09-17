@@ -1,15 +1,20 @@
 {
     "hyprland/workspaces": {
-        "format": "{name}.{icon}",
+        "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
-            "1": "󰖟",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "active": "",
-            "default": "󰇀"
+            "1": "󱂈",
+            "2": "󱂉",
+            "3": "󱂊",
+            "4": "󱂋",
+            "5": "󱂌",
+            "6": "󱂍",
+            "7": "󱂎",
+            "8": "󱂏",
+            "9": "󱂐",
+            "0": "󱂑",
+            "active": "󰄛",
+            "default": "󰬹"
         },
         "persistent-workspaces": {
             "*": 5 // 5 Workspaces by default
