@@ -12,17 +12,23 @@
         "./modules/workspace.jsonc",
         "./modules/system.jsonc",
         "./modules/clock.jsonc",
-        "./modules/mpris.jsonc"
+        "./modules/bluetooth.jsonc",
+        "./modules/mpris.jsonc",
+        "./modules/idle_inhibitor.jsonc",
+        "./modules/apps.jsonc",
+        "./modules/media.jsonc"
     ],
     "modules-left": [
-        "hyprland/workspaces",
-        "mpris",
+        "group/applications",
+        "group/media",
+        "idle_inhibitor",
         "hyprland/submap"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
+        "bluetooth",
         "custom/notification",
         "group/hardware",
         "group/system",

@@ -1,0 +1,49 @@
+@import 'colors.css';
+
+#cpu {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#memory {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#load {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#disk {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#temperature {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#clock {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}

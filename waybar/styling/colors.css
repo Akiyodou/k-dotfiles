@@ -1,0 +1,29 @@
+/* Light Blue Theme */
+
+/* Background */
+@define-color background    rgba(0, 0, 90, 1);
+@define-color surface       rgba(8, 20, 115, 1);
+@define-color surface-alt   rgba(20, 50, 100, 0.8);
+
+/* Foreground */
+@define-color texts         rgba(190, 255, 255, 1);
+@define-color text-muted    rgba(195, 195, 210, 0.5);
+
+/* Accents */
+@define-color accent        rgba(55,182, 255, 1);
+@define-color accent-alt    rgba(185, 85, 110, 0.8);
+
+/* States */
+@define-color urgent        rgba(255, 45, 25, 1);
+@define-color warning       rgba(255, 190, 70, 1);
+@define-color success       rgba(80, 210, 155, 1);
+
+/* Structure */
+@define-color border        rgba(70, 115, 145, 1);
+
+/* EVA Colors */
+@define-color body          rgba(150, 0, 50, 1); /* Red */
+@define-color frame         rgba(255, 100, 0, 1); /* Orange */
+@define-color joint        rgba(240, 240, 255, 1); /* White */
+@define-color trim         rgba(10, 0, 35, 1);  /* Black */
+@define-color plate         rgba(0, 225, 30, 1); /* Green */

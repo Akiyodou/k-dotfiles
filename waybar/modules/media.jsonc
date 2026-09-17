@@ -1,0 +1,17 @@
+{
+    "custom/media_play": {
+        "exec": "~/.config/waybar/scripts/media_play.sh",
+        "escape": true,
+        "tooltip": false
+    },
+    "custom/media_animation": {
+        "exec": "~/.config/waybar/scripts/media_animation.sh",
+        "tooltip": false
+    },
+    "custom/media_time": {
+        "exec": "~/.config/waybar/scripts/media_time.sh",
+        "escape": true,
+        "tooltip": false,
+        "interval": 1
+    }
+}

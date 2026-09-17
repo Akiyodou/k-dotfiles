@@ -1,0 +1,27 @@
+{
+    "custom/terminal": {
+        "format": "",
+        "on-click": "kitty",
+        "tooltip": false
+    },
+    "custom/code": {
+        "format": "",
+        "on-click": "vscodium",
+        "tooltip": false
+    },
+    "custom/browser": {
+        "format": "",
+        "on-click": "librewolf",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "format": "",
+        "on-click": "spotify",
+        "tooltip": false
+    },
+    "custom/files": {
+        "format": "",
+        "on-click": "files",
+        "tooltip": false
+    }
+}

@@ -3,6 +3,11 @@
         "interval": 10,
         "format": "CPU: {usage}%"
     },
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10
+    },
     "load": {
         "interval": 10,
         "format": "load: {load1}",
@@ -11,5 +16,12 @@
     "disk": {
         "interval": 30,
         "format": "{percentage_free}% free on {path}"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
     }
 }

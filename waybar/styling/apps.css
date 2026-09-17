@@ -1,0 +1,94 @@
+@import "colors.css";
+
+/* Custom Modules */
+
+#applications {
+    margin: 5px 5px;
+    padding: 3px 3px;
+    background-color: @background;
+    border-radius: 20px;
+    color: @text;
+}
+
+#custom-terminal {
+    padding: 4px 6px;
+}
+
+#custom-code {
+    padding: 4px 6px;
+}
+
+#custom-browser {
+    padding: 4px 6px;
+}
+
+#custom-spotify {
+    padding: 4px 6px;
+}
+
+#custom-files {
+    padding: 4px 6px;
+}
+
+#custom-media_play {
+    margin: 3px 4px;
+    padding: 1px 4px;
+    background-color: @background;
+    border-radius: 10px;
+}
+
+#custom-media_time {
+    margin: 3px 4px;
+    padding: 1px 4px;
+    background-color: @background;
+    border-radius: 10px;
+}
+
+/* Mode Modules */
+#idle_inhibitor {
+    margin: 4px 5px;
+    padding: 6px 6px 6px 6px;
+    background-color: @background;
+    border-radius: 15px;
+    color: @text;
+}
+
+#battery {
+  margin: 4px 4px;
+  padding: 6px 5px;
+  background-color: @background;
+  border-radius: 12px;
+  color: @joint;
+}
+
+#battery.warning {
+    background-color: @frame;
+}
+
+#battery.critical {
+    background-color: @body;
+}
+
+#backlight {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#pulseaudio {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}
+
+#bluetooth {
+    margin: 4px 4px;
+    padding: 5px 5px;
+    background-color: @background;
+    border-radius: 12px;
+    color: @joint;
+}

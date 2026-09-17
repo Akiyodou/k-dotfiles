@@ -1,4 +1,18 @@
 {
+    "group/applications": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 650,
+            "transition-right-to-left:": false
+        },
+        "modules": [
+            "custom/terminal",
+            "custom/code",
+            "custom/browser",
+            "custom/spotify",
+            "custom/files"
+        ]
+    },
     "group/hardware": {
         "orientation": "horizontal",
         "drawer": {
@@ -7,8 +21,10 @@
         },
         "modules": [
             "cpu",
+            "memory",
             "load",
-            "disk"
+            "disk",
+            "temperature"
         ]
     },
     "group/system": {
@@ -21,6 +37,13 @@
             "battery",
             "backlight",
             "pulseaudio"
+        ]
+    },
+    "group/media": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/media_play",
+            "custom/media_time"
         ]
     }
 }
