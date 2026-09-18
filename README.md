@@ -1,22 +1,40 @@
-<<<<<<< HEAD
 # ARCH Linux Dotfiles
+
+Personal Arch Linux + Hyprland configuarion for my ThinkPad T480. This repo contains my window manager, waybar, rofi, kitty, audio visualizer, scripts, themes, and desktop utilities. 
 
 ## Environment
 
-Arch Linux
-Hyprland
-Waybar
-Kitty
-Rofi
+OS - Arch Linux \
+WM - Hyprland \
+Taskbar - Waybar \
+Terminal - Kitty \
+Launcher/Menu - Rofi \
+Shell - zsh \
+Hardware - Thinkpad T480 \
 
-### Hyprland Lua config in hypr/
+## Components
 
-### Waybar Config in waybar/ 
-Still need styling css 
+### Hyprland
+Window manager configuration, workspaces, window rules,
+keybindings, and desktop behavior.
 
-### Lenovo ThinkPad T480
+#### Desktop Image
 
-=======
-# k-dotfiles
-Learning to Rice Arch Linux
->>>>>>> c773206b5451819ab1312139099fe86289ac7f32
+![AkiArch Desktop](docs/images/desktop.png)
+
+### Waybar
+Modular status bar configuration with system information,
+workspaces, media controls, and Cava visualization.
+
+![AkiArch Desktop](docs/images/waybar.png)
+
+### Rofi
+Custom launcher and desktop control interface.
+
+![AkiArch Rofi](docs/images/rofi.png)
+
+
+## Installation
+
+> This repository is primarily designed for my personal system.
+> It is not currently intended to be a one-command installation.
